@@ -4,21 +4,21 @@ export default function projects() {
   const itemsData = [
     {
       id: 1,
+      title: "Tasty",
+      description: "Website about food and recipes with React JS",
+      url: "https://tasty-ten.vercel.app/",
+    },
+    {
+      id: 2,
       title: "DAK Clothes",
       description: "Online Clothes Store for Men, Womens and Childreen",
       url: "https://toony10.github.io/DAK-clothes/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Elite corp",
       description: "Simple Temp with HTML,CSS,Javascript and Bootstrab",
       url: "https://toony10.github.io/Elite-Corp/",
-    },
-    {
-      id: 3,
-      title: "Leno",
-      description: "Simple Temp with HTML,CSS and Javascript",
-      url: "https://leno.vercel.app/",
     },
   ];
   return (
