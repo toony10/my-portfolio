@@ -95,9 +95,11 @@
         color: #00000087;
         font-size: 19px;
         letter-spacing: 2px;
-        overflow: hidden;
+        overflow: scroll;
+
         @include mobile {
-          font-size: 15px;
+          font-size: 14px;
+          padding: 10px;
         }
       }
       a {

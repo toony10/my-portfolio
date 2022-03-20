@@ -26,7 +26,7 @@ export default function projects() {
       <h1>Projects</h1>
       <div className='items'>
         {itemsData.map((item) => (
-          <div className='item'>
+          <div key={item.id} className='item'>
             <h1>{item.title}</h1>
             <p className='Description'>{item.description}</p>
             <a href={item.url} target='_blank' rel='noreferrer'>
