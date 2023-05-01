@@ -14,14 +14,14 @@ export default function Intro() {
   }, []);
   const textRef = useRef();
   return (
-    <div className="intro" id="intro">
-      <div className="left">
-        <div className="imgContainer">
-          <img src="assets/man.png" alt="" />
+    <div className='intro' id='intro'>
+      <div className='left'>
+        <div className='imgContainer'>
+          <img src='assets/man1.png' style={{ objectFit: "cover" }} alt='' />
         </div>
       </div>
-      <div className="right">
-        <div className="wrapper">
+      <div className='right'>
+        <div className='wrapper'>
           <h2>Hi There, I'm</h2>
           <h1>Anton Amir</h1>
           <h3>
@@ -32,15 +32,15 @@ export default function Intro() {
             "EELU" and very passionate about web development since I entered the
             world of technology
           </p>
-          <a className="download-cv" href="assets/cv.pdf" download>
+          <a className='download-cv' href='assets/cv.pdf' download>
             <button>
               <ArrowDownward />
               My C.V
             </button>
           </a>
         </div>
-        <a href="#skills">
-          <img src="assets/down.png" alt="" />
+        <a href='#skills'>
+          <img src='assets/down.png' alt='' />
         </a>
       </div>
     </div>
