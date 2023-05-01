@@ -1,12 +1,38 @@
 import "./contact.scss";
-import { useState } from "react";
-import { LinkedIn, Facebook, GitHub } from "@material-ui/icons";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { LinkedIn, GitHub, WhatsApp } from "@material-ui/icons";
+
 export default function Contact() {
   const [message, setMessage] = useState(false);
-  const handleSubmit = (e) => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
     setMessage(true);
+
+    emailjs
+      .sendForm(
+        "service_up5iqpk",
+        "template_b63ttkf",
+        form.current,
+        "jh2Yz5jkJOwsMR4w4"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+          window.scrollTo(0, document.body.scrollHeight);
+          document.getElementById("alert").classList.remove("hidden");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setMessage(true);
   };
+
   return (
     <div className='contact' id='contact'>
       <div className='left'>
@@ -14,11 +40,22 @@ export default function Contact() {
       </div>
       <div className='right'>
         <h2>Contact.</h2>
-        <form onSubmit={handleSubmit}>
-          <input type='text' placeholder='Email' required />
-          <textarea placeholder='Message' required></textarea>
+        <form ref={form} onSubmit={sendEmail}>
+          <input name='email' type='text' placeholder='Email' required />
+          <input name='phone' type='text' placeholder='Phone number' />
+          <textarea name='msg' placeholder='Message' required></textarea>
           <button type='submit'>Send</button>
-          {message && <span>Thanks, I,ll reply ASAP :)</span>}
+          {message && (
+            <span
+              style={{
+                background: "#40c740",
+                color: "white",
+                padding: "5px",
+                borderRadius: "5px",
+              }}>
+              Thanks, I,ll reply ASAP :)
+            </span>
+          )}
         </form>
         <div className='socialIcons'>
           <a
@@ -31,10 +68,10 @@ export default function Contact() {
             <GitHub className='icon' />
           </a>
           <a
-            href='https://www.facebook.com/profile.php?id=100009154630898'
+            href='https://wa.me/message/GM6TF62VR3CEM1'
             target='_blank'
             rel='noreferrer'>
-            <Facebook className='icon' />
+            <WhatsApp className='icon' color='red' />
           </a>
         </div>
       </div>
