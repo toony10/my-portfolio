@@ -18,7 +18,7 @@ export default function Intro() {
       <div className='left'>
         <div className='imgContainer'>
           <img
-            src='assets/imgs/man1.png'
+            src='assets/imgs/man.png'
             style={{ objectFit: "cover" }}
             alt=''
           />
