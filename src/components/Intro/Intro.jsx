@@ -1,7 +1,7 @@
 import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
-import { ArrowDownward } from "@material-ui/icons";
+import { BsDownload } from "react-icons/bs";
 export default function Intro() {
   useEffect(() => {
     init(textRef.current, {
@@ -17,7 +17,11 @@ export default function Intro() {
     <div className='intro' id='intro'>
       <div className='left'>
         <div className='imgContainer'>
-          <img src='assets/man1.png' style={{ objectFit: "cover" }} alt='' />
+          <img
+            src='assets/imgs/man1.png'
+            style={{ objectFit: "cover" }}
+            alt=''
+          />
         </div>
       </div>
       <div className='right'>
@@ -34,7 +38,7 @@ export default function Intro() {
           </p>
           <a className='download-cv' href='assets/cv.pdf' download>
             <button>
-              <ArrowDownward />
+              <BsDownload className='m-auto mr-2' />
               My C.V
             </button>
           </a>

@@ -2,20 +2,20 @@ import "./topbar.scss";
 import { LocalPhone, Mail } from "@material-ui/icons";
 function Topbar({ menuOpen, setMenuOpen }) {
   return (
-    <div className={"topbar " + (menuOpen && "active")}>
+    <div className={"overflow-hidden topbar " + (menuOpen && "active")}>
       <div className='wrapper'>
         <div className='left'>
           <a href='#intro' className='logo'>
             Anton..
           </a>
-          <div className='itemContainer'>
+          <a href='tel:01090677513' className='itemContainer'>
             <LocalPhone className='icon' />
             <span>01090677513</span>
-          </div>
-          <div className='itemContainer'>
+          </a>
+          <a href='mailto:amiranton257@gmail.com' className='itemContainer'>
             <Mail className='icon' />
             <span>amiranton257@gmail.com</span>
-          </div>
+          </a>
         </div>
         <div className='right'>
           <div className='hamburger' onClick={() => setMenuOpen(!menuOpen)}>

@@ -2,15 +2,25 @@ import "./contact.scss";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { LinkedIn, GitHub, WhatsApp } from "@material-ui/icons";
+import { TextField } from "@material-ui/core";
+import { AiFillCheckCircle } from "react-icons/ai";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
 
 export default function Contact() {
-  const [message, setMessage] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const form = useRef();
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
-    setMessage(true);
 
     emailjs
       .sendForm(
@@ -30,7 +40,7 @@ export default function Contact() {
           console.log(error.text);
         }
       );
-    setMessage(true);
+    setOpen(true);
   };
 
   return (
@@ -39,23 +49,33 @@ export default function Contact() {
         <img src='assets/shake.svg' alt='' />
       </div>
       <div className='right'>
-        <h2>Contact.</h2>
+        <h2>Contact</h2>
         <form ref={form} onSubmit={sendEmail}>
-          <input name='email' type='text' placeholder='Email' required />
-          <input name='phone' type='text' placeholder='Phone number' />
-          <textarea name='msg' placeholder='Message' required></textarea>
-          <button type='submit'>Send</button>
-          {message && (
-            <span
-              style={{
-                background: "#40c740",
-                color: "white",
-                padding: "5px",
-                borderRadius: "5px",
-              }}>
-              Thanks, I,ll reply ASAP :)
-            </span>
-          )}
+          <TextField
+            name='email'
+            id='standard-basic'
+            label='Email'
+            variant='standard'
+            required
+          />
+          <TextField
+            name='phone'
+            id='standard-basic'
+            label='Phone Number'
+            variant='standard'
+          />
+          <TextField
+            name='msg'
+            id='standard-basic'
+            label='Message'
+            variant='standard'
+            multiline
+            rows={4}
+            required
+          />
+          <button type='submit' className='mt-5'>
+            Send
+          </button>
         </form>
         <div className='socialIcons'>
           <a
@@ -74,6 +94,27 @@ export default function Contact() {
             <WhatsApp className='icon' color='red' />
           </a>
         </div>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          aria-labelledby='alert-dialog-title'
+          aria-describedby='alert-dialog-description'>
+          <DialogContent>
+            <DialogContentText id='alert-dialog-description' className='flex'>
+              <AiFillCheckCircle
+                className='m-auto mr-4 text-8xl lg:text-5xl'
+                color='#0ca90ca6'
+              />
+              Your message has been sent successfully and I'll contact you soon.
+              Thank you for your time :)
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} autoFocus>
+              OK
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
     </div>
   );

@@ -5,57 +5,12 @@
   flex-direction: column;
   h1 {
     text-align: center;
-    margin: 70px;
     color: $main-color;
-    font-weight: bolder;
+    font-weight: 500;
     font-size: 50px;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     font-family: monospace;
-  }
-  .container {
-    display: flex;
-    flex-direction: row;
     overflow: hidden;
-
-    .left {
-      flex: 0.5;
-      margin: auto;
-    }
-    .right {
-      flex: 0.5;
-      margin: auto;
-    }
-    .skill {
-      text-align: center;
-      margin: 60px 10px;
-
-      > * {
-        margin-bottom: 10px;
-      }
-      h2 {
-        font-size: 30px;
-        font-family: monospace;
-        font-weight: 200;
-        letter-spacing: 2px;
-        color: $main-color;
-      }
-    }
-    .skill-level {
-      .levle-bola {
-        font-size: 20px;
-        background-color: #5d10f3;
-        border-radius: 50%;
-        color: #5d10f3;
-        margin: 4px;
-        &.full {
-          background-color: $main-color;
-          color: $main-color;
-        }
-        &.half-full {
-          background-color: #3a1583;
-          color: #3a1583;
-        }
-      }
-    }
+    height: 70px;
   }
 }
