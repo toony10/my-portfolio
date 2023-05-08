@@ -2,7 +2,6 @@ import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
 import { BsDownload } from "react-icons/bs";
-// import { introImg } from "assets/";
 export default function Intro() {
   useEffect(() => {
     init(textRef.current, {
@@ -19,7 +18,7 @@ export default function Intro() {
       <div className='left'>
         <div className='imgContainer'>
           <img
-            src='https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blta2b39c95d6288a7b/6415b161e016021836114349/messi.jpg?auto=webp&format=pjpg&width=1080&quality=60'
+            src='assets/Imgs/man.png'
             style={{ objectFit: "cover" }}
             alt=''
           />
