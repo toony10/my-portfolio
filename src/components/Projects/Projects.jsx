@@ -72,7 +72,7 @@ export default function projects() {
               <h2 className='font-bold text-xl text-[#2b1758]'>{item.title}</h2>
               <p className='text-gray-500'>{item.description}</p>
             </div>
-            <div className='flex items-center justify-center bg-gray-50'>
+            <div className='flex items-center justify-center bg-gray-50 h-[38%] lg:h-[20%]'>
               <div className='w-1/2 px-6 py-3 m-4 flex justify-start'>
                 {item.icons}
               </div>
