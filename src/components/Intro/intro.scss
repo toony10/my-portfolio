@@ -21,9 +21,9 @@
       align-items: flex-end;
       justify-content: center;
       float: left;
-      top: 50px;
+      top: 40px;
       @include mobile {
-        height: 85%;
+        height: 75%;
         bottom: 0;
         position: relative;
         width: 400px;
