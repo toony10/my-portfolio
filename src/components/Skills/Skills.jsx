@@ -87,7 +87,7 @@ export default function Skills() {
 
   return (
     <div className='skills' id='skills'>
-      <div className='mt-5 h-52 md:h-[5.5rem] lg:h-24'>
+      <div className='mt-5 h-56 md:h-[5.5rem] lg:h-24 overflow-hidden'>
         <h1>Skills</h1>
         <p className='text-center font-light tracking-wider text-lg text-gray-500 top-0'>
           Here is what I learned and what I can do

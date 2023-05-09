@@ -25,18 +25,18 @@ export default function Intro() {
         </div>
       </div>
       <div className='right'>
-        <div className='wrapper'>
+        <div className='wrapper flex justify-center'>
           <h2>Hi There, I'm</h2>
           <h1>Anton Amir</h1>
           <h3>
             Front End <span ref={textRef}></span>
           </h3>
           <p>
-            A fourth year student in the Faculty of Computers and Information at
-            "EELU" and very passionate about web development since I entered the
-            world of technology
+            A web developer specializing in HTML, CSS, JavaScript, and
+            frameworks like React,next js. I'm passionate about designing and
+            developing attractive and user-friendly websites.
           </p>
-          <a className='download-cv' href='assets/cv.pdf' download>
+          <a className='download-cv mt-7' href='assets/cv.pdf' download>
             <button>
               <BsDownload className='m-auto mr-2' />
               My C.V

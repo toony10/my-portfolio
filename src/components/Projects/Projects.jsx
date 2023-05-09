@@ -28,7 +28,7 @@ export default function projects() {
       imgSrs: "assets/Imgs/projectes/project1.JPG",
       title: "travel advisor",
       description:
-        "An application to display the nearest places (restaurants, cafes, hotels) to the user and guide him to choose the appropriate place",
+        "An application that helps the user to explore some nearby places (restaurants, cafes or motels)",
       icons: [
         <FaReact className='mr-3 duration-200 hover:scale-105 text-blue-500 text-3xl' />,
         <SiGooglemaps className='mr-3 duration-200 hover:scale-105 text-[#d1463a] text-3xl' />,
@@ -40,7 +40,7 @@ export default function projects() {
       imgSrs: "assets/Imgs/projectes/project2.JPG",
       title: "Tasty",
       description:
-        "A website specialized in food and the most famous food recipes and chefs",
+        "A website specialized in food and the most famous food recipes and chefs. With some dynamic functions",
       icons: [
         <FaReact className='mr-3 duration-200 hover:scale-105 text-blue-500 text-3xl' />,
         <SiSass className='mr-3 duration-200 hover:scale-105 text-[#c36291] text-3xl' />,
@@ -59,7 +59,7 @@ export default function projects() {
       <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 p-1 sm:px-0'>
         {itemsData.map((item) => (
           <div
-            className='shadow-sm shadow-gray-500 rounded-lg overflow-hidden h-[23rem] md:h-[25rem] lg:h-[26rem]'
+            className='shadow-sm shadow-gray-500 rounded-lg overflow-hidden h-[27rem] md:h-[25rem] lg:h-[26rem]'
             key={item.id}>
             <a href={item.url} target='_blank'>
               <img

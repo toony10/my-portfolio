@@ -57,11 +57,13 @@ export default function Contact() {
             label='Email'
             variant='standard'
             required
+            className='h-16 lg:h-12'
           />
           <TextField
             name='phone'
             id='standard-basic'
             label='Phone Number'
+            className='h-16 lg:h-12'
             variant='standard'
           />
           <TextField
